@@ -1,1 +1,16 @@
+/target
+/**/target
+**/*.rs.bk
+
+# Ignore build artifacts and dependencies
+Cargo.lock
+Cargo.toml.orig
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+
+# OS files
 .DS_Store
+Thumbs.db
