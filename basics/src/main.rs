@@ -15,10 +15,15 @@ fn main() {
     create_string();
     create_string_two();
 
-    let name: String = String::from("sumanth JM");
-    let len = get_len(name);
+    // let name: String = String::from("sumanth JM");
+    // let len = get_len(name);
     // println!("{}", name);  // ownership is moved to the get_len() fn
-    println!("{}", len);
+
+    let name: String = String::from("sumanth ----");
+    let (len, name) = get_len(name);
+    // println!("{}", len);
+    // println!("{}", name); // ownership is moved to the get_len() fn
+    println!("{}{}", len, name);
 }
 
 fn sum(a: i32, b: i32) -> i32 {
@@ -43,7 +48,7 @@ fn create_string() {
     println!("{}", name);
 }
 
-fn create_string_two (){
+fn create_string_two() {
     let mut name = String::from("Sumanth ");
 
     name.push_str("JM");
@@ -58,7 +63,10 @@ fn create_string_two (){
     println!("{}", name2)
 }
 
+// fn get_len(s: String) -> usize{
+//     return s.len();
+// }
 
-fn get_len(s: String) -> usize{
-    return s.len();
+fn get_len(s: String) -> (usize, String) {
+    return (s.len(), s);
 }

@@ -14,3 +14,8 @@ Cargo.toml.orig
 # OS files
 .DS_Store
 Thumbs.db
+# Environment configuration
+**/.env
+
+# VS Code Configuration
+**/.vscode/
