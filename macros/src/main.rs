@@ -19,20 +19,22 @@
 
 #[derive(Debug)]
 
-struct User{
+struct User {
     username: String,
     password: String,
     age: u32,
 }
 
-fn main(){
-    let u = User{
+fn main() {
+    let u = User {
         username: String::from("user1"),
         password: String::from("password123"),
         age: 30,
     };
 
-    print!("{:?}", u.username); // Debug trait
-    print!("{:?}", u); // Debug trait
+    println!("username: {:?}", u.username); // read username
+    println!("password: {:?}", u.password); // read password
+    println!("age: {}", u.age);
+    println!("{:?}", u);
     // print!("{}", u); // Display trait
 }
