@@ -21,7 +21,7 @@ struct Counter {
 }
 
 pub fn counter_contract(
-    program_id: &Pubkey,
+    _program_id: &Pubkey,
     accounts: &[AccountInfo],
     instruction_data: &[u8],
 ) -> ProgramResult {
@@ -44,7 +44,7 @@ pub fn counter_contract(
 
     counter_data.serialize(&mut *account.data.borrow_mut())?;
 
-    // msg!("Counter updated to {}", counter_data.count);
+    msg!("Counter updated to {}", counter_data.count);
 
     Ok(())
 }
