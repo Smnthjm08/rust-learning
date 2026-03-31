@@ -1,6 +1,6 @@
-use borsh::{BorshDeserialize, BorshSerialize, to_vec, from_slice};
+use borsh::{from_slice, to_vec, BorshDeserialize, BorshSerialize};
 
-#[derive(BorshSerialize, BorshDeserialize, Debug)]
+#[derive(BorshSerialize, BorshDeserialize, Debug, PartialEq)]
 struct User {
     username: String,
     email: String,
@@ -23,4 +23,7 @@ fn main() {
     // deserialize
     let decoded_user: User = from_slice(&bytes).unwrap();
     println!("Decoded user: {:?}", decoded_user);
+
+    assert_eq!(decoded_user, user);
+    println!("✅ Passed!");
 }
