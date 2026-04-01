@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     // Environment setup & latest features
+    "types": ["node", "bun-types"],
+    "forceConsistentCasingInFileNames": true,
     "lib": ["ESNext"],
     "target": "ESNext",
-    "module": "Preserve",
+    "module": "esnext",
     "moduleDetection": "force",
-    "jsx": "react-jsx",
     "allowJs": true,
 
     // Bundler mode
